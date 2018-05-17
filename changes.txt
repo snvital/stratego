@@ -1,0 +1,8 @@
+change game board css classes (styles.css)
+
+change table#board (game.jade)
+
+
+change assignSquares (client.js)
+
+change this.board (Game.js)

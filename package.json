@@ -1,0 +1,16 @@
+{
+  "name": "socket.io-chess",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "3.3.x",
+    "jade": "0.33.x",
+    "popper.js": "^1.14.3",
+    "socket.io": "0.9.x",
+    "underscore": "1.5.x",
+    "words-to-numbers": "^1.4.1"
+  }
+}
