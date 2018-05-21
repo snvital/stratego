@@ -413,6 +413,8 @@ var Client = (function(window) {
     src.removeClass(getPieceClasses(piece)).addClass('empty');
     dest.removeClass(gameClasses).addClass(getPieceClasses(piece));
 
+   
+
     // Return move string
     return piece+selection.file+selection.rank+'x'+dest.attr('id');
   };
@@ -501,6 +503,21 @@ var Client = (function(window) {
         if(gameState.lastMove.type === 'capture'){
           $('#'+gameState.lastMove.startSquare).addClass('last-move');
           $('#'+gameState.lastMove.endSquare).addClass('last-move');
+
+            if($('#'+gameState.lastMove.startSquare).hasClass('unknown')){
+              $('#'+gameState.lastMove.startSquare).removeClass('unknown');
+              setTimeout(function(){
+                $('#'+gameState.lastMove.startSquare).addClass('unknown').addClass('unknown');
+              },20000);
+            }
+
+            if($('#'+gameState.lastMove.endSquare).hasClass('unknown')){
+              $('#'+gameState.lastMove.endSquare).removeClass('unknown');
+              setTimeout(function(){
+                $('#'+gameState.lastMove.endSquare).addClass('unknown').addClass('unknown');
+              },20000);
+            }
+
 
 
         }
